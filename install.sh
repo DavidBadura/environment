@@ -13,7 +13,7 @@ confirm () {
     esac
 }
 
-confirm "bashrc konfigurieren?" && source ./install/bashrc.sh;
-confirm "git konfigurieren?" && source ./install/git.sh;
+confirm "bashrc konfigurieren?" && source ./scripts/bashrc.sh && confirm "bashrc server konfiguration?" && source ./scripts/bashrc_server.sh;
+confirm "git konfigurieren?" && source ./scripts/git.sh;
 
 echo "fertig!";
