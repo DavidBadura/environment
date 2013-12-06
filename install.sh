@@ -18,4 +18,5 @@ confirm "bashrc konfigurieren?" && source ./scripts/bashrc.sh && confirm "bashrc
 confirm "git konfigurieren?" && source ./scripts/git.sh;
 confirm "vim ide installieren?" && source ./scripts/vim.sh;
 
-echo "fertig!";
+echo 'Lade deine bashrc neu mit folgenden Befehl: "source ~/.bashrc"';
+echo "Fertig!";
