@@ -52,6 +52,8 @@ alias www='sudo -u www-data '
 alias www-php='sudo -u www-data php '
 alias www-console='sudo -u www-data php app/console'
 
+alias webshare='python -m SimpleHTTPServer'
+
 
 # extract archive
 extract () {
