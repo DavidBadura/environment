@@ -1,8 +1,18 @@
 source ~/.git-prompt.sh
 
-export GIT_PS1_SHOWDIRTYSTATE=1
+prompt_black='\[\e[30m\]'
+prompt_red='\[\e[31m\]'
+prompt_green='\[\e[32m\]'
+prompt_yellow='\[\e[33m\]'
+prompt_blue='\[\e[34m\]'
+prompt_magenta='\[\e[35m\]'
+prompt_cyan='\[\e[36m\]'
+prompt_white='\[\e[37m\]'
+prompt_default_color='\[\e[0m\]'
+prompt_git_ps1='$(__git_ps1 "@%s")'
 
-export PS1='[\t] \[\e[32m\]\u@\H\[\e[0m\] \[\e[33m\]\w\[\e[0m\] $(__git_ps1 "@%s") \n\$ '
+export GIT_PS1_SHOWDIRTYSTATE=1
+PS1="\[\e]0;\w\a\]\n[\t] ${prompt_green}\u@\h ${prompt_yellow}\w ${prompt_cyan}${prompt_git_ps1}${prompt_default_color}\n\$"
 
 
 # Alias
