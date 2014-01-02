@@ -1,4 +1,7 @@
-source ~/.git-prompt.sh
+if [ -f ~/.git-prompt.sh ]
+    then
+        source ~/.git-prompt.sh
+fi
 
 prompt_black='\[\e[30m\]'
 prompt_red='\[\e[31m\]'
@@ -12,7 +15,7 @@ prompt_default_color='\[\e[0m\]'
 prompt_git_ps1='$(__git_ps1 "@%s")'
 
 export GIT_PS1_SHOWDIRTYSTATE=1
-PS1="\[\e]0;\w\a\]\n[\t] ${prompt_green}\u@\h ${prompt_yellow}\w ${prompt_cyan}${prompt_git_ps1}${prompt_default_color}\n\$"
+PS1="\[\e]0;\w\a\]\n[\t] ${prompt_green}\u@\h ${prompt_yellow}\w ${prompt_cyan}${prompt_git_ps1}${prompt_default_color}\n\$ "
 
 
 # Alias
