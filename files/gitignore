@@ -1,3 +1,4 @@
 *.swp
 *.swo
 Session.vim
+tags.vendors
