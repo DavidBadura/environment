@@ -3,6 +3,8 @@ if [ -f ~/.git-prompt.sh ]
         source ~/.git-prompt.sh
 fi
 
+PATH=$PATH:$HOME/.composer/vendor/bin
+
 prompt_black='\[\e[30m\]'
 prompt_red='\[\e[31m\]'
 prompt_green='\[\e[32m\]'
