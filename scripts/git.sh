@@ -5,6 +5,8 @@ git config --global color.ui auto
 git config --global core.editor vim
 git config --global core.excludesfile '~/environment/files/gitignore'
 git config --global push.default "current"
+git config --global help.autocorrect 1
+git config --global branch.autosetuprebase always
 
 git config --global alias.st status
 git config --global alias.co checkout
