@@ -14,3 +14,4 @@ git config --global alias.ci commit
 git config --global alias.br branch
 git config --global alias.staged 'diff --cached'
 git config --global alias.graph "log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative"
+git config --global alias.changes "!git log --name-status HEAD.."
