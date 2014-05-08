@@ -41,6 +41,7 @@ alias mkdir='mkdir -pv'
 alias now='date +"%T'
 alias ports='netstat -tulanp'
 alias history-search='history | grep --color=auto'
+alias syslog='tail -f /var/log/syslog'
 
 
 # Bash Directory Bookmarks
