@@ -14,9 +14,16 @@ confirm () {
     esac
 }
 
-confirm "bashrc konfigurieren?" && source ./scripts/bashrc.sh && confirm "bashrc server konfiguration?" && source ./scripts/bashrc_server.sh;
-confirm "git konfigurieren?" && source ./scripts/git.sh;
-confirm "vim ide installieren?" && source ./scripts/vim.sh;
+confirm "configure bash" \
+    && source ./scripts/bashrc.sh \
+    && confirm "bashrc server konfiguration?" \
+    && source ./scripts/bashrc_server.sh
 
-echo 'Lade deine bashrc neu mit folgenden Befehl: "source ~/.bashrc"';
-echo "Fertig!";
+confirm "configure git" \
+    && source ./scripts/git.sh
+
+confirm "install vim" \
+    && source ./scripts/vim.sh
+
+echo "reinitialize your bash configuration by running 'bash' or executing 'source ~/.bashrc'";
+echo "All done!";
