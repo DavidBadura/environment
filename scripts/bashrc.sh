@@ -1,4 +1,7 @@
 #!/bin/bash
+
+cd `dirname $0` && source ../config.sh
+
 if ! [ "`type -t __git_ps1`" == 'function' ]
     then
         curl -o ~/.git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
