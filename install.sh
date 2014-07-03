@@ -14,6 +14,8 @@ confirm () {
     esac
 }
 
+cd `dirname $0` && source config.sh
+
 confirm "configure bash" \
     && source ./scripts/bashrc.sh \
     && confirm "bashrc server konfiguration?" \

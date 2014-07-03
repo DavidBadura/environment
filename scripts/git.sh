@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd `dirname $0` && source ../config.sh
-
 git config --global user.name "$ENV_GIT_USERNAME"
 git config --global user.email "$ENV_GIT_EMAIL"
 git config --global color.ui auto
