@@ -6,3 +6,5 @@ if ! [ "`type -t __git_ps1`" == 'function' ]
 fi
 
 echo 'source ~/environment/files/bashrc' >> ~/.bashrc
+
+ln -sf ~/environment/files/tmux.conf ~/.tmux.conf
