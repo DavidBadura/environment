@@ -2,7 +2,7 @@
 
 confirm () {
     # call with a prompt string or use a default
-    read -r -p "${1:-Are you sure?} " -n 1 response
+    read -r -p "${1:-Are you sure} (y/n)?" -n 1 response
     echo ""
     case $response in
         [yY][eE][sS]|[yY])
@@ -18,7 +18,7 @@ cd `dirname $0` && source config.sh
 
 confirm "configure bash" \
     && source ./scripts/bashrc.sh \
-    && confirm "bashrc server konfiguration?" \
+    && confirm "configure bash-server" \
     && source ./scripts/bashrc_server.sh
 
 confirm "configure git" \
