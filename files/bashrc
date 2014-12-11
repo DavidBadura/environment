@@ -111,6 +111,7 @@ source ~/.bookmarks
 
 # symfony2
 alias console='php app/console '
+alias sf='php bin/console '
 
 
 # www specials alias
