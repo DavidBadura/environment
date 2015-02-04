@@ -90,7 +90,7 @@ alias portsnum='netstat -tan'
 alias ports='sudo netstat -tulpen'
 alias hisgrep='history | grep --color=auto'
 alias syslog='tail -f /var/log/syslog'
-
+alias t='task'
 
 # Bash Directory Bookmarks
 alias m0='alias g0="cd `pwd`"'
