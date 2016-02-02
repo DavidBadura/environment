@@ -8,6 +8,8 @@ git config --global core.excludesfile '~/environment/files/gitignore'
 git config --global push.default "current"
 git config --global help.autocorrect 3000
 git config --global branch.autosetuprebase always
+git config --global fetch.prune true
+git config --global pull.rebase true
 
 git config --global alias.st status
 git config --global alias.co checkout
