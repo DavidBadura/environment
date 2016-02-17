@@ -10,6 +10,7 @@ git config --global help.autocorrect 3000
 git config --global branch.autosetuprebase always
 git config --global fetch.prune true
 git config --global pull.rebase true
+git config --global rerere.enabled true
 
 git config --global alias.st status
 git config --global alias.co checkout
