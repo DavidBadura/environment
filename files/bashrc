@@ -63,7 +63,7 @@ PS1="\[\e]0;\w\a\]\n[\t] ${prompt_green}\u@\h ${prompt_yellow}\w ${prompt_cyan}$
 
 
 # Alias
-alias ls="ls --color=auto"
+alias ls="ls --group-directories-first --color=auto"
 alias l='ls -aFl'
 alias ll='ls -lah'
 
@@ -79,9 +79,6 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# auto color grep matches and ignore svn directories
-export GREP_OPTIONS="--colour=auto --exclude-dir=.svn"
-
 alias mkdir='mkdir -p'
 
 # Other
@@ -91,6 +88,11 @@ alias ports='sudo netstat -tulpen'
 alias hisgrep='history | grep --color=auto'
 alias syslog='tail -f /var/log/syslog'
 alias t='task'
+
+# git
+alias git-delete-merged-branches='git checkout master && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias git-show-unrebased-branches='{ git br --contains master; git br; } | sort | uniq -u'
+alias git-log='git log --name-status'
 
 # Bash Directory Bookmarks
 alias m0='alias g0="cd `pwd`"'
@@ -152,4 +154,13 @@ export LS_COLORS='rs=0:di=01;94:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;
 # here the user can hook in and
 # add personal or host specific configuration
 [ -e ~/.bashrc.local ] && source ~/.bashrc.local
+
+# force svn diff to use a pager
+svn() {
+    if [ x"$1" = xdiff ] || [ x"$1" = xdi ]; then
+        /usr/bin/svn "$@" | less -R
+    else
+        /usr/bin/svn "$@"
+    fi
+}
 
