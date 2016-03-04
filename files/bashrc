@@ -88,6 +88,7 @@ alias ports='sudo netstat -tulpen'
 alias hisgrep='history | grep --color=auto'
 alias syslog='tail -f /var/log/syslog'
 alias t='task'
+alias please='sudo "$BASH" -c "$(history -p !!)"'
 
 # git
 alias git-delete-merged-branches='git checkout master && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
