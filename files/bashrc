@@ -45,6 +45,7 @@ ssh() {
     command ssh "$@"
     settitle "bash"
 }
+alias tm-rename="tmux rename-window `basename $PWD`"
 
 if [ -f ~/.git-prompt.sh ]
     then
