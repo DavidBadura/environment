@@ -25,6 +25,7 @@ git config --global alias.amend "commit -a --amend"
 git config --global alias.aa "add -A"
 git config --global alias.fu "reset --hard"
 git config --global alias.squash '!f() { git reset --soft $(git merge-base HEAD $1) && git commit -m "$2"; }; f'
+git config --global alias.cleanup '!f() { git checkout master && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d; }; f'
 
 git config --global alias.staged 'diff --cached'
 git config --global alias.graph "log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative"
