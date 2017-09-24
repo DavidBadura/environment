@@ -20,13 +20,6 @@ set LANG en_US.UTF-8
 # update the values of LINES and COLUMNS.
 # shopt -s checkwinsize
 
-
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-# if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    # . /etc/bash_completion
-# fi
-
 # tmux stuff
 set TERM "xterm-256color"
 alias tmux="tmux -2"
@@ -42,18 +35,13 @@ alias tmux="tmux -2"
 
 alias tm-rename='tmux rename-window `basename $PWD`'
 
-# if [ -f ~/.git-prompt.sh ]
-    # then
-        # source ~/.git-prompt.sh
-# fi
-
 set EDITOR vim
 set PATH $PATH $HOME/.composer/vendor/bin $HOME/bin
 
 
 # Alias
 alias ls="ls --group-directories-first --color=auto"
-alias l='ls -aFl'
+alias l='ls -ahFl'
 alias ll='ls -lah'
 
 alias ..='cd ..'
@@ -91,8 +79,8 @@ alias console='php bin/console '
 alias vim-fast='vim -u NONE'
 
 # www specials alias
-alias www='sudo -u www-data '
-alias www-php='sudo -u www-data php '
+alias www='sudo -u www-data'
+alias www-php='sudo -u www-data php'
 
 # theme bobthefish
 set -g theme_color_scheme zenburn
@@ -100,7 +88,9 @@ set fish_key_bindings fish_vi_key_bindings
 
 # here the user can hook in and
 # add personal or host specific configuration
-# [ -e ~/.bashrc.local ] && source ~/.bashrc.local
+if test -e ~/.config.local.fish
+    source ~/.config.local.fish
+end
 
 # force svn diff to use a pager
 # svn() {
