@@ -33,7 +33,7 @@ alias tmux="tmux -2"
     # settitle "bash"
 # }
 
-alias tm-rename='tmux rename-window `basename $PWD`'
+alias tm-rename='tmux rename-window (basename $PWD)'
 
 set EDITOR vim
 set PATH $PATH $HOME/.composer/vendor/bin $HOME/bin
@@ -84,6 +84,8 @@ alias www-php='sudo -u www-data php'
 
 # theme bobthefish
 set -g theme_color_scheme zenburn
+set -g theme_newline_cursor yes
+set -g fish_prompt_pwd_dir_length 99
 set fish_key_bindings fish_vi_key_bindings
 
 # here the user can hook in and
