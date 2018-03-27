@@ -52,7 +52,7 @@ if [ -f ~/.git-prompt.sh ]
         source ~/.git-prompt.sh
 fi
 
-EDITOR=vim
+export EDITOR=vim
 PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/bin
 
 # ansi color escape sequences
@@ -81,6 +81,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+alias apt='sudo apt'
 alias apt-get='sudo apt-get'
 alias service='sudo service'
 
