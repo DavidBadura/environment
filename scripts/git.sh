@@ -11,6 +11,7 @@ git config --global fetch.prune true
 git config --global pull.rebase true
 git config --global rebase.autoStash true
 git config --global rerere.enabled true
+git config --global diff.colorMoved plain
 
 git config --global alias.st status
 git config --global alias.co checkout
