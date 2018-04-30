@@ -15,7 +15,6 @@ HISTCONTROL=ignoredups:ignorespace
 # (very handy for cd in svn-projects)
 export FIGNORE='.svn:.git'
 
-
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -26,7 +25,6 @@ HISTFILESIZE=2000
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
 
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -65,15 +63,17 @@ prompt_magenta='\[\e[35m\]'
 prompt_cyan='\[\e[36m\]'
 prompt_white='\[\e[37m\]'
 prompt_default_color='\[\e[0m\]'
-prompt_git_ps1='$(__git_ps1 "@%s")'
+prompt_git_ps1='$(__git_ps1 "\\ue0a0%s")'
+
+prompt_folder=$'\ue5fe'
+prompt_time=$'\uf64f'
 
 export GIT_PS1_SHOWDIRTYSTATE=1
-PS1="\[\e]0;\w\a\]\n[\t] ${prompt_green}\u@\h ${prompt_yellow}\w ${prompt_cyan}${prompt_git_ps1}${prompt_default_color}\n\$ "
-
+PS1="\[\e]0;\w\a\]\n${prompt_time} \t ${prompt_blue}\u@\h ${prompt_yellow}${prompt_folder} \w ${prompt_cyan}${prompt_git_ps1}${prompt_default_color}\n\$ "
 
 # Alias
 alias ls="ls --group-directories-first --color=auto"
-alias l='ls -aFl'
+alias l='ls -aFlh'
 alias ll='ls -lah'
 
 alias ..='cd ..'
