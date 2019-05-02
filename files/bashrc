@@ -8,6 +8,8 @@ export LESSCHARSET='UTF-8'
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -72,7 +74,7 @@ PS1="\[\e]0;\w\a\]\n[\t] ${prompt_green}\u@\h ${prompt_yellow}\w ${prompt_cyan}$
 
 
 # Alias
-alias ls="ls --group-directories-first --color=auto"
+alias ls="ls"
 alias l='ls -aFl'
 alias ll='ls -lah'
 
@@ -99,6 +101,7 @@ alias hisgrep='history | grep --color=auto'
 alias syslog='tail -f /var/log/syslog'
 alias t='task'
 alias please='sudo "$BASH" -c "$(history -p !!)"'
+alias reload='source ~/.bashrc'
 
 # git
 alias git-delete-merged-branches='git checkout master && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
