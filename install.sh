@@ -21,6 +21,11 @@ confirm "configure bash" \
     && confirm "configure bash-server" \
     && source ./scripts/bashrc_server.sh
 
+confirm "install brew" \
+    && source ./scripts/brew.sh
+    && confirm "install packages" \
+    && source ./scripts/brew_packages.sh
+
 confirm "configure git" \
     && source ./scripts/git.sh
 
