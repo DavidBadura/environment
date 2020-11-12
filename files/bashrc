@@ -124,22 +124,13 @@ alias lma='alias | grep -e "alias g[0-9]"|grep -v "alias m"|sed "s/alias //"'
 touch ~/.bookmarks
 source ~/.bookmarks
 
-
-# symfony2
-alias console='php app/console '
-alias sf='php bin/console '
-
-# fast vim (without config) for editing large files
-# -n see https://twitter.com/climagic/status/972222597462134785?s=03
-alias vim-fast='vim -n -u NONE'
-
-# www specials alias
-alias www='sudo -u www-data '
-alias www-php='sudo -u www-data php '
-alias www-console='sudo -u www-data php app/console'
-
-alias webshare='python -m SimpleHTTPServer'
-
+# php
+alias php70='docker run --rm -it --volume $PWD:/app -w /app provolution/php:7.0'
+alias php71='docker run --rm -it --volume $PWD:/app -w /app provolution/php:7.1'
+alias php72='docker run --rm -it --volume $PWD:/app -w /app provolution/php:7.2'
+alias php73='docker run --rm -it --volume $PWD:/app -w /app provolution/php:7.3'
+alias php74='docker run --rm -it --volume $PWD:/app -w /app provolution/php:7.4'
+alias php80='docker run --rm -it --volume $PWD:/app -w /app provolution/php:8.0'
 
 # extract archive
 extract () {
