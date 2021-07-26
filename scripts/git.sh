@@ -18,6 +18,10 @@ git config --global alias.co checkout
 git config --global alias.ci commit
 git config --global alias.br branch
 
+git config --global alias.ignore 'update-index --skip-worktree'
+git config --global alias.unignore 'update-index --no-skip-worktree'
+git config --global alias.ignored '!git ls-files -v | grep "^S"'
+
 git config --global alias.up "push -u"
 git config --global alias.pu "pull --rebase"
 git config --global alias.undo "reset HEAD~1 --mixed"
